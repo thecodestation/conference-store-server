@@ -12,10 +12,10 @@ public class HomeController {
   @Value("${app.version}")
   private String appVersion;
 
-  @GetMapping("/")
+  @GetMapping()
   public Map<String, String> getStatus() {
     final Map<String, String> map = new HashMap<>();
-    map.put("app-version", appVersion);
+    map.put("version", appVersion);
     return map;
   }
 
