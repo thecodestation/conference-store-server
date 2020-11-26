@@ -24,8 +24,7 @@ public class ConferenceApplication {
     UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
     CorsConfiguration config = new CorsConfiguration();
     config.setAllowCredentials(true);
-    config.setAllowedOrigins(
-        Arrays.asList("http://localhost:3000, https://conference-store-client.herokuapp.com"));
+    config.setAllowedOrigins(Arrays.asList("http://localhost:3000"));
     config.setAllowedMethods(Collections.singletonList("*"));
     config.setAllowedHeaders(Collections.singletonList("*"));
     source.registerCorsConfiguration("/**", config);
